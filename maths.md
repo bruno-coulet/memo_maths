@@ -103,6 +103,28 @@ La racine carrée de la variance : il s’exprime dans la même unité que les d
 |Étendue|Repérer rapidement l’amplitude des données|Très sensible|
 |Variance / écart-type|Étudier la dispersion globale (utile en statistique, modélisation)|Sensible, mais moins qu’une simple étendue|
 
+### centrer les données
+
+Répartit les données autour de zéro.
+
+Pour chaque variable (colonne): soustrait la moyenne de cette variable à chaque observation
+
+$$ 𝑥_\text{centré} = x - \bar x $$
+Si une variable a une moyenne $\mu =100$
+après centrage, la moyenne sera $\mu =0$.
+
+Cela ne change pas l'écart-type (la dispersion), seulement la position de la variable sur l’axe des valeurs.
+
+### Réduire les données
+Réduire l’écart-type à 1
+Diviser chaque variable centrée par son écart-type $\sigma$
+Se fait souvent après le centrage :
+
+$$ 𝑥_\text{réduit} = \frac{x - \bar x}{\sigma} $$
+
+Objectif :
+Mettre toutes les variables sur la même échelle, évite qu’une variable avec des grandes valeurs domine les autres 
+
 ### Dérivée
 
 **Dérivation** : étude des variations en un point

@@ -31,12 +31,12 @@ En résumé, les nombres naturels sont utilisés pour compter, tandis que les no
 - centrée sur l'origine d'un repère orthonormé
 - cosinus sur l'axe x, sinus sur l'axe y
 
-![](img/maths/cercle_trigo.png)
+![](img/cercle_trigo.png)
 
 permet d'illustrer et de définir des notions comme celles d'angle, de radian
 et les **fonction trigonométriques** : cosinus, sinus, tangente.
 
-![cercle trigonométrie](img/maths/trigo.png)
+![cercle trigonométrie](img/trigo.png)
 
 
 ### vecteur
@@ -47,11 +47,11 @@ vecteurs de base :
 	- $\vec{j}$  pour les ordonnées
 - permettent d'obtenir les coordonnées d'un vecteur
 
-![u](img/maths/vecteur_u.png)
+![u](img/vecteur_u.png)
 
 Les coordonnées  d'un vecteur se notent verticalement :
 
-![u](img/maths/u.png)
+![u](img/u.png)
 Addition de vecteur = addition de leur coordonnée respectives
 multiplication des coordonnée d'un vecteur par un nombre = multiplication de chacune des coordonnées par ce nombre
 
@@ -82,13 +82,15 @@ Le point milieu d'un jeu de données
 ---
 
 ###  Variance :
-$$\operatorname{Var}(X) = \frac{1}{n} \sum_{i=1}^{n} (X_i - \bar{X})^2$$
+
+$$\operatorname{Var}(X) = \frac{1}{n} \sum_{i=1}^{n} (X_i - \bar{X})^2 $$
+
 – Mesure la dispersion moyenne des valeurs autour de la moyenne.  
 – Chaque écart est mis au carré pour éviter que les écarts positifs et négatifs ne s'annulent.
 
-💡 Si on travaille sur un **échantillon**, on divise par $n - 1$ au lieu de $n$ :
+Si on travaille sur un **échantillon**, on divise par $n - 1$ au lieu de $n$ :
 
-$$\operatorname{Var}(X) = \frac{1}{n - 1} \sum_{i=1}^{n} (X_i - \bar{X})^2$$
+$$ \operatorname{Var}(X) = \frac{1}{n - 1} \sum_{i=1}^{n} (X_i - \bar{X})^2 $$
 ---
 ### Écart-type :
 
@@ -96,24 +98,48 @@ $$\sigma_X = \sqrt{\operatorname{Var}(X)}$$
 
 La racine carrée de la variance : il s’exprime dans la même unité que les données (contrairement à la variance).
 
----
+
 
 |Mesure|Cas d’usage|Sensibilité aux valeurs extrêmes|
 |---|---|---|
 |Étendue|Repérer rapidement l’amplitude des données|Très sensible|
 |Variance / écart-type|Étudier la dispersion globale (utile en statistique, modélisation)|Sensible, mais moins qu’une simple étendue|
 
+
+---
+
+| Terme            | Définition courte                                                                                                                       |
+| ---------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
+| **Centrer**      | Soustraire la **moyenne** → valeurs réparties autour de 0                                                                               |
+| **Réduire**      | Diviser par l’**écart-type** → met toutes les variables sur une échelle comparable                                                      |
+| **Standardiser** | **Centrer + Réduire** → moyenne = 0, écart-type = 1                                                                                     |
+| **Normaliser**   | **Ramener dans un intervalle fixe** (souvent $0,1$) → met toutes les valeurs à la même échelle sans changer la forme de la distribution |
+
+### Normaliser les données
+
+`Min-Max scaling`
+Pour que les valeurs soient comprises dans un intervalle<br> souvent $0$ et $1$
+
+
+$$ X_\text{normalisé} = \frac {X - X_\text{min}} {X_\text{max} - X_\text{min}} $$
+​
+- Utile quand les variables ont des unités très différentes.
+
+- Recommandé pour les algorithmes sensibles aux amplitudes brutes (réseaux de neurones, distances euclidiennes...).
+
+- Ne change pas la forme de la distribution, juste l’échelle.
+
+
 ### centrer les données
 
 Répartit les données autour de zéro.
 
-Pour chaque variable (colonne): soustrait la moyenne de cette variable à chaque observation
+Pour chaque variable : soustrait la moyenne de la variable à chaque observation
 
 $$ 𝑥_\text{centré} = x - \bar x $$
-Si une variable a une moyenne $\mu =100$
-après centrage, la moyenne sera $\mu =0$.
+Après centrage, la moyenne $\mu =0$.
 
-Cela ne change pas l'écart-type (la dispersion), seulement la position de la variable sur l’axe des valeurs.
+Cela ne change pas l'écart-type (la dispersion), donc ne modifie pas le nuage de points, seulement la position de la variable sur l’axe des valeurs.
 
 ### Réduire les données
 Réduire l’écart-type à 1
@@ -122,8 +148,29 @@ Se fait souvent après le centrage :
 
 $$ 𝑥_\text{réduit} = \frac{x - \bar x}{\sigma} $$
 
-Objectif :
-Mettre toutes les variables sur la même échelle, évite qu’une variable avec des grandes valeurs domine les autres 
+
+- toutes les variables sur la même échelle, avec la même importance
+- évite qu’une variable avec des grandes valeurs domine les autres
+- comparer les valeurs prises par les variables exprimées dans des unités différentes
+- indispensable si les unité de mesure sont différentes d'une variable à l'autre
+
+- Ne pas réduire donne plus d'importance aux variables qui on une variance plus grande
+
+
+### Centrer et réduire = Standardiser
+
+| Aspect      | Standardisation               | Normalisation                              |
+| ----------- | ----------------------------- | ------------------------------------------ |
+| Formule     | $\frac{X - \mu}{\sigma}$      | $\frac{X - X_{\min}}{X_{\max} - X_{\min}}$ |
+| Résultat    | Moyenne = 0, Écart-type = 1   | Valeurs entre 0 et 1 (ou autre)            |
+| Sensibilité | Moins sensible aux outliers   | Très sensible aux outliers                 |
+| Utilisation | PCA, K-Means, SVM, Régression | Réseaux de neurones, distances             |
+
+
+Utile quand :
+- Les données suivent une distribution gaussienne (ou presque).
+
+- Les algorithmes sont basés sur la distance ou les coefficients (régression linéaire, K-means, PCA
 
 ### Dérivée
 
@@ -137,7 +184,7 @@ un tout petit peu plus de t = dt (notation de Leibnitz)
 un tout petit peu plus de f = df
 
 La pente de la séquence au point d'abscisse 1 vaut $\frac{df}{dt}_{(1)}$ :
-![Derivé de leibnitz](img/maths/pente_sequente.png)
+![Derivé de leibnitz](img/pente_sequente.png)
 
 Quand on zoom suffisament sur une courbe, elle devient une droite
 
@@ -193,18 +240,15 @@ $$ax3+bx2+cx+d=0$$
 
 où a, b, c, et d sont des constantes, avec $$a≠0$$A toujours au moins une solution réelle et peut avoir jusqu’à trois solutions réelles (ou une combinaison de solutions réelles et complexes).
 
+![Polynome du second dégré](img/polynome2ndDegre.png)
 
-
-
-
-![Polynome du second dégré](polynome2ndDegre.png)
 ## formes canonique / développée / factorisée
 
 Soit le polynôme de degré 2 :
 $$
 f(x) = ax^2 + bx + c
 $$
-![polynome3formes](img/maths/polynome3formes.png)
+![polynome3formes](img/polynome3formes.png)
 Sa forme canonique est donnée par :
 $$
 f(x)=a(x−h)^2+k
@@ -238,7 +282,7 @@ est l'écriture standard sous la forme :
 $f(x)=ax2+bx+c$
 où $a$, $b$, et $c$ sont des réels et $a≠0$
 
-### La **forme factorisée
+### La forme factorisée
 d'un polynôme de degré 2
 
 n'est possible que si le polynôme admet des racines réelles.
@@ -310,7 +354,7 @@ Une **distribution normale** est définie par deux paramètres :
 - **Moyenne $\mu$** : le centre de la distribution.
 - **Écart-type $\sigma$** : la dispersion des valeurs autour de la moyenne.
 
-![](img/maths/loi_normale_0.png)
+![](img/loi_normale_0.png)
 
 Elle est notée : 
 
@@ -335,7 +379,7 @@ Si une variable suit une **distribution normale** ou **gaussienne**:
 | $$ \approx 68\% \text{ des valeurs}$$   | $\text{se situent à moins de } \sigma \text{ de la moyenne}$               |
 | $$ \approx 95\% \text{ des valeurs}$$   | $\text{se situent à moins de }2 \sigma \text{ de la moyenne}$              |
 | $$ \approx 99,7\% \text{ des valeurs}$$ | $\text{se situent à moins de }3 \sigma \text{ de la moyenne}$              |
-|                                         | ![Courbe en cloche  - loi normale - gaussienne](img/maths/loi_normale.png) |
+|                                         | ![Courbe en cloche  - loi normale - gaussienne](img/loi_normale.png) |
 
 ## Loi Normale Centrée Réduite
 

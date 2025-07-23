@@ -1,5 +1,15 @@
-Dans une formule de probabilité, le symbole "pipe" |<br>signifie "sachant que"<br>il exprime une probabilité conditionnelle.
-
+### Conventions
+#### P()
+probabilité que B ait lieu :
+$$
+𝑃
+(
+𝐵
+)$$
+#### |
+sachant que<br>exprime une probabilité conditionnelle.
+la probabilité de A sachant B
+la probabilité que A se réalise, sachant que B est réalisé
 $$
 𝑃
 (
@@ -7,9 +17,20 @@ $$
 ∣
 𝐵
 )$$
+<br>
 
-P(A∣B)  se lit : "la probabilité de A sachant B"<br>
-ou encore : "la probabilité que A se réalise, sachant que B est réalisé"
+
+#### ∩
+
+probabilité que A et B aient lieu :
+$$𝑃
+(
+𝐴
+∩
+𝐵
+)$$
+
+
 | Terme | Définition |
 | ----- | ---------- |
 |<font color="orange">Univers</font> ==Ω== (Omega )<br>ou<br><font color="orange">ensemble fondamental</font> | <br>**ensemble fini ou infini** des issues possibles |

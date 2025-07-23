@@ -31,6 +31,12 @@ $$𝑃
 )$$
 
 
+##### Probabilité conditionnelle
+$$P(A∣B)= \frac{P(A∩B)}{P(B)} \quad\text{si P(B)>0}$$
+​ 
+
+
+
 | Terme | Définition |
 | ----- | ---------- |
 |<font color="orange">Univers</font> ==Ω== (Omega )<br>ou<br><font color="orange">ensemble fondamental</font> | <br>**ensemble fini ou infini** des issues possibles |

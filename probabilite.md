@@ -1,4 +1,4 @@
-Dans une formule de probabilité, le symbole "pipe" (|)  signifie "sachant que", il exprime une probabilité conditionnelle.
+Dans une formule de probabilité, le symbole "pipe" |<br>signifie "sachant que"<br>il exprime une probabilité conditionnelle.
 
 $$
 𝑃
@@ -10,14 +10,15 @@ $$
 
 P(A∣B)  se lit : "la probabilité de A sachant B"<br>
 ou encore : "la probabilité que A se réalise, sachant que B est réalisé"
-| Terme                                                                                                        | Définition                                                                                                                                      |
-| ------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------- |
-| <font color="orange">Univers</font> ==Ω== (Omega )<br>ou<br><font color="orange">ensemble fondamental</font> | <br>**ensemble fini ou infini** des issues possibles                                                                                            |
-| <font color="orange">expérience aléatoire</font>                                                             | on connait l'==Ω== mais pas  le résultat :<br>Toutes les issues sont connues,<br>mais laquelle sera  réalisée ?<br>le résultat est imprévisible |
-| <font color="orange">cardinal</font> d'un ensemble fini<br>noté **\|A\|** pour un ensemble A                 | nombre d'éléments que contient l'ensemble                                                                                                       |
+| Terme | Définition |
+| ----- | ---------- |
+|<font color="orange">Univers</font> ==Ω== (Omega )<br>ou<br><font color="orange">ensemble fondamental</font> | <br>**ensemble fini ou infini** des issues possibles |
+|<font color="orange">expérience aléatoire</font> | on connait l'==Ω== mais pas  le résultat :<br>Toutes les issues sont connues,<br>mais laquelle sera  réalisée ?<br>le résultat est imprévisible |
+| <font color="orange">cardinal</font> d'un ensemble fini A<br>noté <font color="orange">\|A\|</font>| nombre d'éléments que contient l'ensemble|
+
 Si
-- nombre d'issue de l'expérience est fini
-- les issue sont équiprobable
+- le nombre d'issue de l'expérience est fini
+- les issues sont équiprobable
 Alors :
 - probabilité d'un évènement =  cardinal de l'évènement / cardinal de son univers
   $P(A)=∣A∣ / ∣Ω∣​$
@@ -27,7 +28,7 @@ lancer de dé
 ==Ω = {1, 2, 3, 4, 5, 6}==
 
 <font color="orange">événements </font>(sous ensemble) par exemple :
-==A = {1}
+A = {1}
 B = {2, 3, 5}
 C = {5, 6}
 ...

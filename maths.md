@@ -299,11 +299,11 @@ où $x0$​ est la racine double.
 ## Logarithme
 sont la réciproque des exponenetielles
 
-log (100) = 2      parce que 100 = 10^2
-log (1000) = 3    parce que 1000 = 10^3
+**log (100) = 2**      parce que **100 = 10^2**
+**log (1000) = 3**   parce que **1000 = 10^3**
 etc..
 
-
+![](img/log10.svg)
 Logarithme en base 10
 
 | Expression           | Question                                              | Equivalent | Résultats               |

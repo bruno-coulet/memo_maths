@@ -240,7 +240,8 @@ $$ax3+bx2+cx+d=0$$
 
 où a, b, c, et d sont des constantes, avec $$a≠0$$A toujours au moins une solution réelle et peut avoir jusqu’à trois solutions réelles (ou une combinaison de solutions réelles et complexes).
 
-![Polynome du second dégré](img/polynome2ndDegre.png)
+**Polynome du second dégré**
+<img src="img/polynome2ndDegre.png" width=400>
 
 ## formes canonique / développée / factorisée
 
@@ -248,7 +249,9 @@ Soit le polynôme de degré 2 :
 $$
 f(x) = ax^2 + bx + c
 $$
-![polynome3formes](img/polynome3formes.png)
+
+<img src="img/polynome3formes.png" width=400>
+
 Sa forme canonique est donnée par :
 $$
 f(x)=a(x−h)^2+k
@@ -303,8 +306,10 @@ sont la réciproque des exponenetielles
 **log (1000) = 3**   parce que **1000 = 10^3**
 etc..
 
-![](img/log10.svg)
-Logarithme en base 10
+<img src="img/log10.png" width=500>
+
+
+**Logarithme en base 10**
 
 | Expression           | Question                                              | Equivalent | Résultats               |
 | -------------------- | ----------------------------------------------------- | ---------- | ----------------------- |
@@ -312,7 +317,7 @@ Logarithme en base 10
 | $$\log_{10} 1000$$   | combien de 10 multiplier entre eux pour obtenir 1000  | $$10^3$$   | $$\log_{10} 1000 = 3 $$ |
 | $$\log_{10} 10 000$$ | combien de 10 multiplier entre eux pour obtenir 10000 | $$10^4$$   | $$\log_{10} 100 = 4$$   |
 
-Logarithme en base 2
+**Logarithme en base 2**
 
 | $$\log_{2} 8 $$ | combien de 2 multiplier entre eux pour obtenir 8  | $$10^2$$ | $$\log_{2} 8 = 3$$  |
 | --------------- | ------------------------------------------------- | -------- | ------------------- |
@@ -320,10 +325,11 @@ Logarithme en base 2
 | $$\log_{2} 32$$ | combien de 2 multiplier entre eux pour obtenir 32 | $$10^4$$ | $$\log_{2} 32 = 5$$ |
 
 
-log 
-Les tables de logarithme simplifient la multiplication de grand nombres en les transformant en addition
-pour multiplier 2 chiffre, il faut additionner leur logarithmes :
-log(988 452x659 233) = log(988 452) + log(659 233))
+**Les tables de logarithme** simplifient la multiplication de grand nombres en les transformant en addition<br>
+**pour multiplier 2 chiffre, il faut additionner leur logarithmes** :
+**log(988 452x659 233) = log(988 452) + log(659 233))**
+<br>
+**logit** = logarithme naturel = ln = **log base $𝑒≈2.718$**
 
 
 ### racine / exposant

@@ -329,9 +329,11 @@ etc..
 **pour multiplier 2 chiffre, il faut additionner leur logarithmes** :
 **log(988 452x659 233) = log(988 452) + log(659 233))**
 <br>
-**logit** = logarithme naturel = ln = **log base $𝑒≈2.718$**
+**logarithme naturel = logarithme népérien = log base $𝑒≈2.718$**
 
+<img src="img/log_neperien.png" width="500">
 
+utilisé par la fonction **logit**
 ### racine / exposant
 $2^2 = 4$
 

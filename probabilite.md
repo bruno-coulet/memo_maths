@@ -1,34 +1,19 @@
 ### Conventions
-#### P()
-probabilité que B ait lieu :
-$$
-𝑃
-(
-𝐵
-)$$
-#### |
-sachant que<br>exprime une probabilité conditionnelle.
-la probabilité de A sachant B
-la probabilité que A se réalise, sachant que B est réalisé
-$$
-𝑃
-(
-𝐴
-∣
-𝐵
-)$$
-<br>
+
+| Écriture                  | Signification                                 | Exemple                 | Lecture                                                   |
+| ------------------------- | --------------------------------------------- | ----------------------- | --------------------------------------------------------- |
+| $P(A)$                    | Probabilité de l’événement $A$                | $P(\text{pile}) = 0.5$  | La probabilité de pile est 0,5                       |
+| $P(A \cap B)$             | Probabilité conjointe de $A$ et $B$           | $P(A \cap B)$           | La probabilité que A et B se produisent simultanément|
+| $P(A \cup B)$             | Probabilité de $A$ ou $B$                     | $P(A \cup B)$           | La probabilité que A ou B se produise                |
+| $P(A \mid B)$             | Probabilité conditionnelle de $A$ sachant $B$ | $P(A \mid B)$           | La probabilité de A sachant que B est réalisé        |
+| $P(\bar{A})$ ou $P(A^c)$  | Probabilité de non-$A$                        | $P(\bar{A}) = 1 - P(A)$ | La probabilité que A ne se produise pas              |
+| $P(B \setminus A)$        | Probabilité de $B$ sans $A$                   | $P(B \setminus A)$      | La probabilité de B mais pas A                       |
+| $P(A_1, A_2, \dots, A_n)$ | Probabilité jointe de plusieurs événements    | $P(X=2, Y=3)$           | La probabilité que X=2 et Y=3                        |
+| $P(X = x)$                | Loi de probabilité d’une variable aléatoire   | $P(X = 5)$              | Probabilité que la variable $X$ prenne la valeur 5   |
 
 
-#### ∩
 
-probabilité que A et B aient lieu :
-$$𝑃
-(
-𝐴
-∩
-𝐵
-)$$
+
 
 **A∩B** 
 - se lit "A **intersection** B" ou  " A inter B"

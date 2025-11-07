@@ -5,7 +5,7 @@ nombres entiers positifs utilisés pour compter
 
 - Ils commencent à 1 (ou parfois à 0 selon la définition) et continuent à l'infini : 1, 2, 3, 4, 5, ...
 - Ils n'incluent pas de fractions, de décimales ou de nombres négatifs.
-- Ils sont utilisés pour compter des objets discrets[
+- Ils sont utilisés pour compter des objets discrets
 
 ### Nombres réels, $R$
 
@@ -195,6 +195,30 @@ elles ont donc les mêmes variations
 la variation d'une droite dépend du signe de son coefficient directeur :
 coefficient directeur > 0 : droite croissante
 coefficient directeur < 0 : droite décroissante
+
+
+### le gradient
+
+Le gradient $\frac{∂𝐿}{∂w}$​ mesure la pente de la fonction coût par rapport à $𝑤$
+
+👉 C’est la variation de la fonction coût (par exemple log loss (en ordonnée) quand le paramètre $w$ (en abscisse) varie légèrement
+
+- Si $\frac{∂𝐿}{∂w} > 0$ la pente est positive → la fonction coût augmente quand 
+$𝑤$ augmente.
+
+- Si $\frac{∂𝐿}{∂w} < 0$ la pente est négative → la fonction coût diminue quand $𝑤$ augmente
+
+### Desente de gradient
+En machine learning, dans l’apprentissage (gradient descent), on ajuste $𝑤$ dans le sens opposé au gradient :
+$$ 𝑤 = 𝑤−𝛼\frac{∂𝐿}{∂w} $$
+
+$\alpha$ est  un tout petit positif, cela diminue petit à petit le paramètre $w$ pour aller vers un minimum de la courbe $L(w)$
+
+| Axe              | Contenu                | Interprétation           |
+| ---------------- | ---------------------- | ------------------------ |
+| **x (abscisse)** | le **poids (w)**       | variable du modèle       |
+| **y (ordonnée)** | la **log loss (L(w))** | erreur moyenne du modèle |
+
 
 ## opérations
 - addition

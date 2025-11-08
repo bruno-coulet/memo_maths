@@ -323,25 +323,59 @@ où $x0$​ est la racine double.
 
 
 
-## Logarithme
+## Logarithmes
 sont la réciproque des exponenetielles
 
-**log (100) = 2**      parce que **100 = 10^2**
-**log (1000) = 3**   parce que **1000 = 10^3**
+La forme générale de la courbe logarithmique est la même pour toutes les bases :
+
+- passe par le point (1,0)
+- est croissante
+- est très pentue pour les petits $𝑥$
+- s’aplatit quand $𝑥$ devient grand
+
+| Base | Fonction           | Effet sur la courbe       |
+| ---- | ------------------ | ------------------------- |
+| 2    | $y = \log_2(x)$    | Monte plus **rapidement** |
+| 10   | $y = \log_{10}(x)$ | Monte plus **doucement**  |
+| e    | $y = \ln(x)$       | Entre les deux            |
+
+
+Logarithme répond à cette question :<br>
+« À quelle puissance faut-il élever la base $𝑏$ pour obtenir $y = 𝑥$ ? $$ log_𝑏(𝑥) = y⟺b^y=x$$
+
+
+🔹 Exemples : $log_{10}(10)$<br>
+
+Base : $b = 10$<br>
+Nombre : $x = 10$<br>
+On cherche $𝑦$ tel que  $10^y = 10 \quad$ ⇒ $\quad 𝑦 = 1$ $\quad$ ⇒ $\quad log_{10}(10) = 1$
+
+
+$100 = 10^2$ →  $log (100) = 2$ <br>
+$1000 = 10^3$  →  $log (1000) = 3$<br>
 etc..
+
+
+🔹 Exemples : $log_{2}(8)$<br>
+
+Base : $b = 2$<br>
+Nombre : $x = 8$<br>
+On cherche $𝑦$ tel que  $2^y = 8 \quad ⇒ \quad2^3=8$ ⇒ $\quad 𝑦 = 3$ $\quad$ ⇒ $\quad log_{2}(8) = 3$<br>
+
+$(2*2*2=8)$
 
 <img src="img/log10.png" width=500>
 
-
-**Logarithme en base 10**
+### Logarithme en base 10
 
 | Expression           | Question                                              | Equivalent | Résultats               |
 | -------------------- | ----------------------------------------------------- | ---------- | ----------------------- |
-| $$\log_{10} 100 $$   | combien de 10 multiplier entre eux pour obtenir 100   | $$10^2$$   | $$\log_{10} 100 =2$$    |
-| $$\log_{10} 1000$$   | combien de 10 multiplier entre eux pour obtenir 1000  | $$10^3$$   | $$\log_{10} 1000 = 3 $$ |
-| $$\log_{10} 10 000$$ | combien de 10 multiplier entre eux pour obtenir 10000 | $$10^4$$   | $$\log_{10} 100 = 4$$   |
+| $$\log_{10} 100 $$   | combien de 10 multiplier entre eux pour obtenir 100   | $$10^2 = 100$$   | $$\log_{10} 100 =2$$    |
+| $$\log_{10} 1000$$   | combien de 10 multiplier entre eux pour obtenir 1000  | $$10^3 = 1000$$   | $$\log_{10} 1000 = 3 $$ |
+| $$\log_{10} 10 000$$ | combien de 10 multiplier entre eux pour obtenir 10000 | $$10^4 = 10000$$   | $$\log_{10} 10000 = 4$$   |
 
-**Logarithme en base 2**
+
+### Logarithme en base 2
 
 | $$\log_{2} 8 $$ | combien de 2 multiplier entre eux pour obtenir 8  | $$10^2$$ | $$\log_{2} 8 = 3$$  |
 | --------------- | ------------------------------------------------- | -------- | ------------------- |
@@ -353,9 +387,15 @@ etc..
 **pour multiplier 2 chiffre, il faut additionner leur logarithmes** :
 **log(988 452x659 233) = log(988 452) + log(659 233))**
 <br>
-**logarithme naturel = logarithme népérien = log base $𝑒≈2.718$**
+
+### logarithme naturel ou népérien
+ C’est le logarithme dont la base est $𝑒≈2.71828$<br>
+$e$ étant le nombre d’Euler
 
 <img src="img/log_neperien.png" width="500">
+
+notation standard en mathématiques : $ln(𝑥)$<br>
+notation internationale et en machine learning : $log$
 
 utilisé par la fonction **logit**
 ### racine / exposant

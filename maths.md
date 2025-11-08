@@ -85,6 +85,8 @@ Le point milieu d'un jeu de données
 
 $$\operatorname{Var}(X) = \frac{1}{n} \sum_{i=1}^{n} (X_i - \bar{X})^2 $$
 
+$${Var}(X) = \frac{1}{n} \sum_{i=1}^{n} (X_i - \bar{X})^2 $$
+
 – Mesure la dispersion moyenne des valeurs autour de la moyenne.  
 – Chaque écart est mis au carré pour éviter que les écarts positifs et négatifs ne s'annulent.
 
@@ -122,7 +124,7 @@ Pour que les valeurs soient comprises dans un intervalle<br> souvent $0$ et $1$
 
 
 $$ X_\text{normalisé} = \frac {X - X_\text{min}} {X_\text{max} - X_\text{min}} $$
-$$ X_{normalisé} = \frac {X - X_{min}} {X_{max} - X_{min}} $$
+
 ​
 - Utile quand les variables ont des unités très différentes.
 
@@ -138,6 +140,8 @@ Répartit les données autour de zéro.
 Pour chaque variable : soustrait la moyenne de la variable à chaque observation
 
 $$ 𝑥_\text{centré} = x - \bar x $$
+<br>
+
 Après centrage, la moyenne $\mu =0$.
 
 Cela ne change pas l'écart-type (la dispersion), donc ne modifie pas le nuage de points, seulement la position de la variable sur l’axe des valeurs.

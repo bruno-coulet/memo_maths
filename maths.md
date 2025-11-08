@@ -122,6 +122,7 @@ Pour que les valeurs soient comprises dans un intervalle<br> souvent $0$ et $1$
 
 
 $$ X_\text{normalisé} = \frac {X - X_\text{min}} {X_\text{max} - X_\text{min}} $$
+$$ X_{normalisé} = \frac {X - X_{min}} {X_{max} - X_{min}} $$
 ​
 - Utile quand les variables ont des unités très différentes.
 
@@ -340,8 +341,8 @@ La forme générale de la courbe logarithmique est la même pour toutes les base
 | e    | $y = \ln(x)$       | Entre les deux            |
 
 
-Logarithme répond à cette question :<br>
-« À quelle puissance faut-il élever la base $𝑏$ pour obtenir $y = 𝑥$ ?<br>
+À quelle puissance faut-il élever la base $𝑏$ pour obtenir $y = 𝑥$ ?<br>
+Le logarithme $log_𝑏(𝑥)$ donne l’exposant $𝑦$ tel que $𝑏^𝑦 = 𝑥$
 $$log_𝑏(𝑥) = y \quad \Longleftrightarrow \quad b^y=x$$
 
 

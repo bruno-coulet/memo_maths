@@ -95,7 +95,7 @@ $$ {Var}(X) = \frac{1}{n - 1} \sum_{i=1}^{n} (X_i - \bar{X})^2 $$
 ---
 ### Écart-type :
 
-$$\sigma_X = \sqrt{\operatorname{Var}(X)}$$
+$$\sigma_X = \sqrt{{Var}(X)}$$
 
 La racine carrée de la variance : il s’exprime dans la même unité que les données (contrairement à la variance).
 

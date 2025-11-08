@@ -83,7 +83,6 @@ Le point milieu d'un jeu de données
 
 ###  Variance :
 
-$$\operatorname{Var}(X) = \frac{1}{n} \sum_{i=1}^{n} (X_i - \bar{X})^2 $$
 
 $${Var}(X) = \frac{1}{n} \sum_{i=1}^{n} (X_i - \bar{X})^2 $$
 
@@ -92,7 +91,7 @@ $${Var}(X) = \frac{1}{n} \sum_{i=1}^{n} (X_i - \bar{X})^2 $$
 
 Si on travaille sur un **échantillon**, on divise par $n - 1$ au lieu de $n$ :
 
-$$ \operatorname{Var}(X) = \frac{1}{n - 1} \sum_{i=1}^{n} (X_i - \bar{X})^2 $$
+$$ {Var}(X) = \frac{1}{n - 1} \sum_{i=1}^{n} (X_i - \bar{X})^2 $$
 ---
 ### Écart-type :
 
@@ -454,9 +453,9 @@ Si une variable suit une **distribution normale** ou **gaussienne**:
 
 |                                         | $\sigma = \text{écart-type}$                                               |
 | --------------------------------------- | -------------------------------------------------------------------------- |
-| $$ \approx 68\% \text{ des valeurs}$$   | $\text{se situent à moins de } \sigma \text{ de la moyenne}$               |
-| $$ \approx 95\% \text{ des valeurs}$$   | $\text{se situent à moins de }2 \sigma \text{ de la moyenne}$              |
-| $$ \approx 99,7\% \text{ des valeurs}$$ | $\text{se situent à moins de }3 \sigma \text{ de la moyenne}$              |
+| $\approx$ 68 % des valeurs   | se situent à moins de  $\sigma$ de la moyenne               |
+| $\approx$ 95 % des valeurs   | se situent à moins de 2 $\sigma$ de la moyenne              |
+| $\approx$ 99,7 % des valeurs | se situent à moins de 3 $\sigma$ de la moyenne              |
 |                                         | ![Courbe en cloche  - loi normale - gaussienne](img/loi_normale.png) |
 
 ## Loi Normale Centrée Réduite

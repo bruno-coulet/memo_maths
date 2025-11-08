@@ -341,7 +341,8 @@ La forme générale de la courbe logarithmique est la même pour toutes les base
 
 
 Logarithme répond à cette question :<br>
-« À quelle puissance faut-il élever la base $𝑏$ pour obtenir $y = 𝑥$ ? $$ log_𝑏(𝑥) = y⟺b^y=x$$
+« À quelle puissance faut-il élever la base $𝑏$ pour obtenir $y = 𝑥$ ?<br>
+$log_𝑏(𝑥) = y \quad$⟺$\quad b^y=x$
 
 
 🔹 Exemples : $log_{10}(10)$<br>

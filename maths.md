@@ -176,29 +176,34 @@ Utile quand :
 
 - Les algorithmes sont basés sur la distance ou les coefficients (régression linéaire, K-means, PCA
 
+
 ### Dérivée
 
-**Dérivation** : étude des variations en un point
-Comme cela n'as pas de sens d'étudier les variation sur un point.
-Soit une courbe qui représente un déplacement, temps en abscisse, distance en ordonnée
+**Dérivation** : étude des variations en un point<br>
+Comme cela n'as pas de sens d'étudier les variation sur un point<br>
+Soit une courbe qui représente un déplacement<br>
+- temps en abscisse
+- distance en ordonnée
+
 #### Dérivé selon Leibniz
 
 On veut signifier un changement infiniment petit d'une quantité t :
-un tout petit peu plus de t = dt (notation de Leibnitz)
-un tout petit peu plus de f = df
+- **dt** = un tout petit peu plus de t (notation de Leibnitz)
+- **df** = un tout petit peu plus de f
 
 La pente de la séquence au point d'abscisse 1 vaut $\frac{df}{dt}_{(1)}$ :
 ![Derivé de leibnitz](img/pente_sequente.png)
 
 Quand on zoom suffisament sur une courbe, elle devient une droite
 
-Soit un point B infiniment proche de A, la sequente AB est confondu avec la courbe, c'est une tangente
-La courbe et la tangente sont confondue sur un intervalle infiniment petit autour de A.
+Soit un point B infiniment proche de A<br>
+la **sequente AB** est confondu avec la courbe, c'est une **tangente**<br>
+La courbe et la tangente sont confondue sur un intervalle infiniment petit autour de A<br>
 elles ont donc les mêmes variations
 
 la variation d'une droite dépend du signe de son coefficient directeur :
-coefficient directeur > 0 : droite croissante
-coefficient directeur < 0 : droite décroissante
+- coefficient directeur > 0 : droite croissante
+- coefficient directeur < 0 : droite décroissante
 
 
 ### le gradient

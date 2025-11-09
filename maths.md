@@ -84,7 +84,7 @@ Le point milieu d'un jeu de données<br>
 ###  Variance :
 
 
-$${Var}(X) = \frac{1}{n} \sum_{i=1}^{n} (X_i - \bar{X})^2 $$
+$${Var}(X) = \frac{1}{n} \sum_{i=1}^{n} (X_i - \bar{X})^2$$
 
 – Mesure la dispersion moyenne des valeurs autour de la moyenne.  
 – Chaque écart est mis au carré pour éviter que les écarts positifs et négatifs ne s'annulent.

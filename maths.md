@@ -91,7 +91,7 @@ $${Var}(X) = \frac{1}{n} \sum_{i=1}^{n} (X_i - \bar{X})^2$$
 
 Si on travaille sur un **échantillon**, on divise par $n - 1$ au lieu de $n$ :
 
-$$ {Var}(X) = \frac{1}{n - 1} \sum_{i=1}^{n} (X_i - \bar{X})^2 $$
+$${Var}(X) = \frac{1}{n - 1} \sum_{i=1}^{n} (X_i - \bar{X})^2$$
 ---
 ### Écart-type :
 

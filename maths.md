@@ -61,9 +61,9 @@ multiplication des coordonnée d'un vecteur par un nombre = multiplication de ch
 **mesures de tendance centrale** et de **dispersion** en **statistiques descriptives**.
 
 ### Médiane
-Le point milieu d'un jeu de données
-50 % des unités ont une valeur inférieure ou égale à la médiane
-50 % des unités ont une valeur supérieure ou égale**
+Le point milieu d'un jeu de données<br>
+50 % des unités ont une valeur inférieure ou égale à la médiane<br>
+50 % des unités ont une valeur supérieure ou égale à la médiane<br>
 
 |                            |                                                     |       |
 | -------------------------- | --------------------------------------------------- | ----- |

@@ -57,13 +57,70 @@ multiplication des coordonnée d'un vecteur par un nombre = multiplication de ch
 
 
 ## Statistiques, probabilités
+### Statistiques descriptives
+- Mesure de tendance centrale
+	- moyenne arythmétique
+	- moyenne géométrique
+	- moyenne harmonique
+	- moyenne quadratique
+	- médiane
+	- mode
+- Mesure de dispersion
+- Distribution
 
-**mesures de tendance centrale** et de **dispersion** en **statistiques descriptives**.
+### Mesure de tendance centrale
+#### moyenne arythmétique `np.mean`
+Somme des valeurs divisée par leur nombre<br>
+Donne le centre des données mais tres sensible au valeurs extrêmes
+#### moyenne géométrique `scipy.stats.gmean(variable)`
+moyenne multiplicative<br>
+robuste aux valeurs extrêmes<br>
+non définie pour les valrurs négztives ou nulles
+conseillées pour les données qui varient de manère multiplicative
+#### moyenne harmonique `scipy.stats.hmean(variable)`
+moyenne des inverses<br>
+très sensible aux faibles valeurs<br>
+conseillées pour les taux et ratios<br>
+tres influencé par les valeurs proches de zéro
+#### moyenne quadratique `np.sqrt(np.mean(np.square(variable)))`
+moyenne des carrés<br>
+utile pour l'analyse de variance
+conseillées pour les données qui concernent l'énergie, la puissance
+sensible aux valeur extremes
 
-### Médiane
+#### Médiane
+`np.median(variable)`
+`df['column'].median()`
 Le point milieu d'un jeu de données<br>
-50 % des unités ont une valeur inférieure ou égale à la médiane<br>
-50 % des unités ont une valeur supérieure ou égale à la médiane<br>
+si le nombre de données est apir, ilfaut faire la moyenne des 2 valeurs centrales<br>
+50 % des unités ont une valeur inférieure ou égale à la médiane
+50 % des unités ont une valeur supérieure ou égale**
+robuste aux valeurs extrêmes
+
+#### Mode `modes = df['column'].mode().tolist()`
+valeur la plus présente<br>
+s'applique aux variables numériques et catégorielles
+
+
+### Mesure de dispersion
+####  Étendue  $= X_{\max} - X_{\min}$
+
+– Mesure la distance entre la plus grande et la plus petite valeur<br>
+– C’est simple et rapide pour avoir une idée du "span" des données<br>
+– Très sensible aux valeurs extrêmes (outliers)<br>
+– Ne dit rien sur la distribution des autres valeurs
+
+#### Quartile, écart interquartile, bornes
+Le Quartile divise les données en 4 parties égales :
+- Q1 valeur en dessous de laquelle se trouve 25 % des données
+- Q2 est la médiane qui divise les données en 2
+- Q3 valeur au dessus de laquelle se trouve 25 % des données
+- Q3 - Q1 = écart interquartile contient 50 % des valeurs d'un jeu de données
+- bornes inf et supérieur : au dela, les valeurs sont considérées come des outliers
+- bornes inférieure = Q1 - 1,5 écart interquartile
+- bornes supérieure = Q1 - 1,5 écart interquartile
+
+---
 
 |                            |                                                     |       |
 | -------------------------- | --------------------------------------------------- | ----- |

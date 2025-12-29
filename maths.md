@@ -58,6 +58,16 @@ multiplication des coordonnée d'un vecteur par un nombre = multiplication de ch
 ---
 ---
 
+## Statistiques
+Voir le markdown du même nom
+
+
+| Terme            | Définition courte                                                                                                                       |
+| ---------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
+| **Centrer**      | Soustraire la **moyenne** → valeurs réparties autour de 0                                                                               |
+| **Réduire**      | Diviser par l’**écart-type** → met toutes les variables sur une échelle comparable                                                      |
+| **Standardiser** | **Centrer + Réduire** → moyenne = 0, écart-type = 1                                                                                     |
+| **Normaliser**   | **Ramener dans un intervalle fixe** (souvent $0,1$) → met toutes les valeurs à la même échelle sans changer la forme de la distribution |
 
 ### Normaliser les données
 
@@ -369,71 +379,6 @@ $\sigma$ (sigma) = écart type
 phénomène aléatoire
 
 ---
-### Loi Normale ou Gaussienne
-
-La loi normale, ou loi de Gauss (du nom de son créateur), est une distribution de probabilité symétrique centrée autour de la moyenne $\mu$.  
-Sa médiane est égale à sa moyenne.
-
-Une **distribution normale** est définie par deux paramètres :
-
-- **Moyenne $\mu$** : le centre de la distribution.
-- **Écart-type $\sigma$** : la dispersion des valeurs autour de la moyenne.
-
-![](img/loi_normale_0.png)
-
-Elle est notée : 
-
-$\boxed{X∼N(μ,σ2)}$  c'est à dire $X$ suit une loi normale de moyenne $\mu$ et de variance $\sigma^2$.
-
-L’aire compris entre -1,96 σ et +1,96 σ autour de la moyenne représente 95% de l’aire totale sous la courbe.
-
-
-La taille des individus suit généralement une loi normale avec :
-- μ = 170 cm
-- σ = 10 cm
-
-Cette propriété permet notamment de **filtrer le bruit** :  
-Si l'on répète une mesure un grand nombre de fois, les variations aléatoires (positives ou négatives) finissent par s'annuler lorsque l'on calcule la moyenne.
-
-Si une variable suit une **distribution normale** ou **gaussienne**:
-- Courbe en cloche dont la forme dépend de $\mu$ et  $\sigma$
-- La règle des 68-95-99,7 s'applique 
-
-|                                         | $\sigma = \text{écart-type}$                                               |
-| --------------------------------------- | -------------------------------------------------------------------------- |
-| $\approx$ 68 % des valeurs   | se situent à moins de  $\sigma$ de la moyenne               |
-| $\approx$ 95 % des valeurs   | se situent à moins de 2 $\sigma$ de la moyenne              |
-| $\approx$ 99,7 % des valeurs | se situent à moins de 3 $\sigma$ de la moyenne              |
-|                                         | ![Courbe en cloche  - loi normale - gaussienne](img/loi_normale.png) |
-
-## Loi Normale Centrée Réduite
-
-**Une loi normale centrée réduite est une loi normale qui a été transformée pour avoir
-- une moyenne µ = 0 
-- un écart-type σ = 1
-
-Cela permet d’uniformiser les données et de faciliter les comparaisons et les calculs statistiques.
-On peut comparer différentes distributions normales sans être affecté par leur moyenne et leur écart-type.
-
-Elle est obtenue en transformant une variable $\boxed{X∼N(μ,σ2)}$  (Loi normale)
-En une **nouvelle variable** $Z$
-Qui suit une distribution normale centrée réduite : $\boxed{Z = \dfrac{X - \mu}{\sigma}}$
-
-Cette transformation garantit que **la nouvelle variable $Z$ suit une loi normale avec : $\boxed{Z \sim \mathcal{N}(0, 1)}$
-
-C’est-à-dire une moyenne 0 et un écart-type 1
-
-
-|                     | Distribution normale                             | Distribution normale centrée réduite                                  |
-| ------------------- | ------------------------------------------------ | --------------------------------------------------------------------- |
-| Moyenne $\mu$       | Peut être n'importe quelle valeur                | Toujours 0                                                            |
-| Écart-type $\sigma$ | Peut être n'importe quelle valeur                | Toujours 1                                                            |
-| Notation            | $X \sim \mathcal{N}(\mu, \sigma^2)$              | $Z \sim \mathcal{N}(0,1)$                                             |
-
-
----
-
-
 
 ## Dérivée partielle
 

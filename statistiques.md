@@ -6,7 +6,7 @@
     padding: 10px 15px; 
     margin-bottom: 15px; 
     border-radius: 8px;">
-<h2>Statistiques descriptives</h2>
+<h2>Statistiques descriptives</h>
 </div>
 
 - Mesure de tendance centrale
@@ -19,7 +19,18 @@
 - Mesure de dispersion
 - Distribution
 
-## Mesure de tendance centrale
+
+<div style="
+    background-color: #c8a043ff; 
+    color: #fff; 
+    font-size: 16px; 
+    font-style: italic; 
+    padding: 10px 15px; 
+    margin-bottom: 15px; 
+    border-radius: 8px;">
+<h3>Mesure de tendance centrale</h3>
+</div>
+
 ### moyenne arythmétique `np.mean`
 Somme des valeurs divisée par leur nombre<br>
 Donne le centre des données mais tres sensible au valeurs extrêmes
@@ -53,8 +64,16 @@ valeur la plus présente<br>
 s'applique aux variables numériques et catégorielles
 
 
-## Mesure de dispersion
-
+<div style="
+    background-color: #c8a043ff; 
+    color: #fff; 
+    font-size: 16px; 
+    font-style: italic; 
+    padding: 10px 15px; 
+    margin-bottom: 15px; 
+    border-radius: 8px;">
+<h3>Mesure de la dispersion</h3>
+</div>
 
 
 ###  Étendue  $= X_{\max} - X_{\min}$ `np.ptp(data)`
@@ -91,21 +110,50 @@ Le Quartile divise les données en 4 parties égales :
 
 ###  Variance :
 
-
+Mesure quantitative de la dispersion des valeurs autour de la moyenne :
+1. calculer la moyenne des données
+2. soustraire la moyenn à chaque valeur pour obtenir les écarts
+3. élever chaque écarts au carré
+4. calculer la moyenne des carrés
 $${Var}(X) = \frac{1}{n} \sum_{i=1}^{n} (X_i - \bar{X})^2$$
 
-– Mesure la dispersion moyenne des valeurs autour de la moyenne.  
-– Chaque écart est mis au carré pour éviter que les écarts positifs et négatifs ne s'annulent.
+Plus la variance est éleve, plusles données sont dispersées, et inversement
+– sensible aux valeurs aberrentes  
+– Chaque écart est mis au carré pour éviter que les écarts positifs et négatifs ne s'annulent<br>
+l'interprétation est donc difficile car exprimée en unité au carré
 
-Si on travaille sur un **échantillon**, on divise par $n - 1$ au lieu de $n$ :
+### Variance, Correction de Bessel `ddof=0 ddof=1`
+On travaille généralement sur un échantillon, pas sur la population<br>
+Si on travaille sur une **population**, on divise par **$n$**<br>
+Si on travaille sur un **échantillon**, on divise par **$n - 1$**<br>
+ça corrige le biais de l'estimation
 
 $${Var}(X) = \frac{1}{n - 1} \sum_{i=1}^{n} (X_i - \bar{X})^2$$
+
+|                       |             population       |    échantillon   |
+| -------------------------- | --------------------------------------------------- | ----- |
+| **Numpy**   | `var = np.var(data, ddof=0)`      | `var = np.var(data, ddof=1)`        |
+| **Pandas** | `var = df.['column'].var(ddof=0)`  |  `var = df.['column'].var(ddof=1)`  |
+| **Statistics** | `var = statistics.pvariance(data)` |`var = statistics.variance(data)`|
+
+
+
 ---
 ### Écart-type :
-
+La racine carrée de la variance<br>
+s’exprime dans la même unité que les données (contrairement à la variance)
+- moins sensible aux outliers
 $$\sigma_X = \sqrt{{Var}(X)}$$
 
-La racine carrée de la variance : il s’exprime dans la même unité que les données (contrairement à la variance).
+|                       |             population       |    échantillon   | Par défaut|
+| -------------------------- | --------------------------------------------------- | ----- | ---|
+| **Numpy**   | `std = np.std(data, ddof=0)`      | `std = np.std(data, ddof=1)`        | `ddof=0`|
+| **Pandas** | `std = df.['column'].std(ddof=0)`  |  `std = df.['column'].std(ddof=1)`  | `ddof=1`|
+| **Statistics** | `std = statistics.pstdev(data)` |`std = statistics.stdev(data)`| |
+
+
+
+### Différences  entre écart type et variance
 
 |                            |                                                     |       |
 | -------------------------- | --------------------------------------------------- | ----- |
@@ -119,14 +167,118 @@ La racine carrée de la variance : il s’exprime dans la même unité que les d
 |Variance / écart-type|Étudier la dispersion globale (utile en statistique, modélisation)|Sensible, mais moins qu’une simple étendue|
 
 
----
 
-| Terme            | Définition courte                                                                                                                       |
-| ---------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
-| **Centrer**      | Soustraire la **moyenne** → valeurs réparties autour de 0                                                                               |
-| **Réduire**      | Diviser par l’**écart-type** → met toutes les variables sur une échelle comparable                                                      |
-| **Standardiser** | **Centrer + Réduire** → moyenne = 0, écart-type = 1                                                                                     |
-| **Normaliser**   | **Ramener dans un intervalle fixe** (souvent $0,1$) → met toutes les valeurs à la même échelle sans changer la forme de la distribution |
+
+<div style="
+    background-color: #c8a043ff; 
+    color: #fff; 
+    font-size: 16px; 
+    font-style: italic; 
+    padding: 10px 15px; 
+    margin-bottom: 15px; 
+    border-radius: 8px;">
+<h3>Distribution</h3>
+</div>
+Décrit la manière dont les valeurs d'une variable sont répartie<br>
+<br>
+l'étude de la  distribution permet de :
+- chiffre la probabilité qu'une valeur se situe dans une certaine plage
+- éterminer si la distribution se rapproche d'une distribution théorique connue
+- identifier les caractéristiques des valeur extrêmes ou aberrantes<br>
+
+### Distribution normale
+
+Différentes appélation :<br>
+- loi normale, fréquement observées dans les phénomènes naturels ou sociaux
+- loi de Gauss ou Gaussienne, du nom de son créateur
+- courbe de Gauss
+- courbe en cloche
+
+La majorité des valeurs sont autour de la moyenne, leur fréquence baisse au fur et à mesure qu'on s'en éloigne de part et d'autre.
+
+
+- **Distribution de probabilité symétrique** : centrée autour de la moyenne $\mu$
+- **Egalité des indicateurs de tendance centrale** : médiane = moyenne = normale
+
+- **regle des 68_95_99 :**<br>
+
+|                                         | $\sigma = \text{écart-type}$                                               |
+| --------------------------------------- | -------------------------------------------------------------------------- |
+| $\approx$ 68 % des valeurs   | se situent à moins de  $\sigma$ de la moyenne               |
+| $\approx$ 95 % des valeurs   | se situent à moins de 2 $\sigma$ de la moyenne              |
+| $\approx$ 99,7 % des valeurs | se situent à moins de 3 $\sigma$ de la moyenne              |
+
+<br>
+
+![](img/loi_normale_0.png)
+
+![Courbe en cloche  - loi normale - gaussienne](img/loi_normale.png)
+
+Elle est notée : 
+
+$\boxed{X∼N(μ,σ2)}$  c'est à dire $X$ suit une loi normale de moyenne $\mu$ et de variance $\sigma^2$.
+
+L’aire compris entre -1,96 σ et +1,96 σ autour de la moyenne représente 95% de l’aire totale sous la courbe.
+
+
+La taille des individus suit généralement une loi normale avec :
+- μ = 170 cm
+- σ = 10 cm
+
+Cette propriété permet notamment de **filtrer le bruit** :  
+Si l'on répète une mesure un grand nombre de fois, les variations aléatoires (positives ou négatives) finissent par s'annuler lorsque l'on calcule la moyenne.
+
+
+
+
+
+
+
+## Théoreme centrale limite
+**Données non normales ≠ moyennes non normales**<br>
+
+Même si la distribution des données dans la population n’est pas normale (normalement distribuées)<br>
+la distribution des **moyennes d’échantillons** tend vers une **loi normale**  
+lorsque la taille de l’échantillon est suffisamment grande.
+
+⚠️ Le théorème ne dit pas que les données deviennent normales,  
+mais que les **moyennes calculées sur des échantillons** le deviennent.
+
+
+## Loi Normale Centrée Réduite
+
+**Une loi normale centrée réduite est une loi normale qui a été transformée pour avoir
+- une moyenne µ = 0 
+- un écart-type σ = 1
+
+Cela permet d’uniformiser les données et de faciliter les comparaisons et les calculs statistiques.
+On peut comparer différentes distributions normales sans être affecté par leur moyenne et leur écart-type.
+
+Elle est obtenue en transformant une variable $\boxed{X∼N(μ,σ2)}$  (Loi normale)
+En une **nouvelle variable** $Z$
+Qui suit une distribution normale centrée réduite : $\boxed{Z = \dfrac{X - \mu}{\sigma}}$
+
+Cette transformation garantit que **la nouvelle variable $Z$ suit une loi normale avec : $\boxed{Z \sim \mathcal{N}(0, 1)}$
+
+C’est-à-dire une moyenne 0 et un écart-type 1
+
+
+|                     | Distribution normale                             | Distribution normale centrée réduite                                  |
+| ------------------- | ------------------------------------------------ | --------------------------------------------------------------------- |
+| Moyenne $\mu$       | Peut être n'importe quelle valeur                | Toujours 0                                                            |
+| Écart-type $\sigma$ | Peut être n'importe quelle valeur                | Toujours 1                                                            |
+| Notation            | $X \sim \mathcal{N}(\mu, \sigma^2)$              | $Z \sim \mathcal{N}(0,1)$                                             |
+
+
+### Skewness
+Coefficient d'asymétrie
+Distribution symétrique, skewness = 0
+
+### Kurtosis
+Coefficient d'applatissement
+
+
+
 
 
 <div style="

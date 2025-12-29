@@ -88,6 +88,9 @@ numpy fonction peaktopeak `np.ptp()`
 
 ### Quartile, écart interquartile, bornes
 Le Quartile divise les données en 4 parties égales :
+![quartiles](img/quartiles.png)
+![quartiles](img/boxplot.jpg)
+
 - Q1 valeur en dessous de laquelle se trouve 25 % des données
 - Q2 est la médiane qui divise les données en 2
 - Q3 valeur au dessus de laquelle se trouve 25 % des données
@@ -358,7 +361,7 @@ def group_rare_categorie(df, column, threshold=5, new_label='Other'):
     background-color: #c8a043ff; 
     color: #fff; 
     font-size: 16px; 
-    font-style: italic; 
+    font-style: italic;    yyy i"' 
     padding: 10px 15px; 
     margin-bottom: 15px; 
     border-radius: 8px;">

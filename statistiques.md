@@ -269,14 +269,120 @@ C’est-à-dire une moyenne 0 et un écart-type 1
 | Écart-type $\sigma$ | Peut être n'importe quelle valeur                | Toujours 1                                                            |
 | Notation            | $X \sim \mathcal{N}(\mu, \sigma^2)$              | $Z \sim \mathcal{N}(0,1)$                                             |
 
+---
+---
+---
 
 ### Skewness
-Coefficient d'asymétrie
+Coefficient d'asymétrie<br>
 Distribution symétrique, skewness = 0
+|Distribution |Skewness  |Données|
+|---|---|---|
+|symétrique| = 0|
+|asymétrie positive| > 0|queue + longue à droite|
+|asymétrie négative| < 0|queue + longue à gauche|
+
+---
+---
+---
+
 
 ### Kurtosis
-Coefficient d'applatissement
+Coefficient d'applatissement<br>
+mesure la concentration des données autour de la moyenn
+|Distribution |kurtosis  |Données|
+|---|---|---|
+|symétrique| = 0|
+|pointue<br>leptokurtique| > 0|plus concentrées autour de la moyenne|
+|applatie<br>platykurtique| < 0|moins concentrées autour de la moyenne|
 
+---
+---
+---
+
+### Skewness Kurtosis
+|Module |Skewness  |kurtosis|
+|---|---|---|
+|**Pandas**| `df.['column'].skew()`|`df.['column'].kurtosis()`|
+|**Scipy**| `stats.skew(df['column'])`|`stats.kurtosis(df['column'])`|
+
+
+
+<div style="
+    background-color: #c8a043ff; 
+    color: #fff; 
+    font-size: 16px; 
+    font-style: italic; 
+    padding: 10px 15px; 
+    margin-bottom: 15px; 
+    border-radius: 8px;">
+<h3>Variables catégorielles</h3>
+</div>
+
+- fréquence
+- proportion
+- modalités rares
+
+### Fréquence
+Dénombrer les occurences de chaque modalités
+**mode** = modalité la plus fréquente
+`df.['column'].value_counts()`
+
+### Proportion
+fréquence relative de chaue modalité, expriméeen % du total du total des observations
+`df.['column'].value_counts(normalize=True)`
+
+### Modalité rare
+2 possibilités :
+- regrouper les modalités sous représentées dans une modalité 'Autres'
+- rajouter les modalités à la modalité la plus proche si possible
+
+
+```python
+def group_rare_categorie(df, column, threshold=5, new_label='Other'):
+    """
+    Pour un DataFrame (df)
+    la fonction regroupe les catégories rares
+    fixées par un seuil (threshold) d'une variable catégorielle (column)
+    sous l'étiquette 'labenew_l'
+    """
+    # calcul de la fréquence des modalités
+    frequency = df[column].value_counts()
+    # identification des catégories rares
+    rare_categories = frequency[frequency < threshold].index
+    # remplacement des catégories rares par 'Other'
+    df[columns] = df[columns].replace(rare_categories, new_label) 
+```
+
+<div style="
+    background-color: #c8a043ff; 
+    color: #fff; 
+    font-size: 16px; 
+    font-style: italic; 
+    padding: 10px 15px; 
+    margin-bottom: 15px; 
+    border-radius: 8px;">
+<h3>Tableau de contingence ou tableau croisé</h3>
+<p>Explore les associations entres 2 variables</p>
+</div>
+
+- exploration initale
+- tests tatistiques
+- modélisation
+
+```python
+contengency_table = pd.crosstab(df['column_1'], df['column_2'])
+```
+
+### Indice de diversité
+quantifient la répartition et l'équilibre des catégories au sein dune variable ou d'un couple de variables
+#### Indice de diversité de Berger-Parker
+Proportion de la ctégorie la plus importante<br>
+Plus il est proche de 1, plus la diversité est faible et inversement
+#### Indice de diversité de Simpson
+Proportion de la ctégorie la plus importante<br>
+Plus il est proche de 1, plus la diversité est faible et inversement
+#### Indice de diversité de Shanon-Weather
 
 
 

@@ -1,4 +1,14 @@
-## Familles de nombres
+<div style="
+    background-color: #c8a043ff; 
+    color: #fff; 
+    font-size: 16px; 
+    font-style: italic; 
+    padding: 10px 15px; 
+    margin-bottom: 15px; 
+    border-radius: 8px;">
+    <h2>Famille de nombres</h2>
+</div>
+
 ### Nombres naturels, N ou ℕ
 
 nombres entiers positifs utilisés pour compter
@@ -24,8 +34,20 @@ Les nombres réels représentent tous les points sur une ligne numérique contin
 - Les réels permettent des opérations plus complexes comme les racines carrées de nombres négatifs.
 
 En résumé, les nombres naturels sont utilisés pour compter, tandis que les nombres réels représentent toutes les valeurs possibles sur une ligne numérique continue.
+<br>
+<br>
+<br>
 
-## cercle trigonométrie
+<div style="
+    background-color: #c8a043ff; 
+    color: #fff; 
+    font-size: 16px; 
+    font-style: italic; 
+    padding: 10px 15px; 
+    margin-bottom: 15px; 
+    border-radius: 8px;">
+    <h2>Cercle trigonométrie</h2>
+</div>
 
 - rayon 1
 - centrée sur l'origine d'un repère orthonormé
@@ -39,7 +61,16 @@ et les **fonction trigonométriques** : cosinus, sinus, tangente.
 ![cercle trigonométrie](img/trigo.png)
 
 
-### vecteur
+<div style="
+    background-color: #c8a043ff; 
+    color: #fff; 
+    font-size: 16px; 
+    font-style: italic; 
+    padding: 10px 15px; 
+    margin-bottom: 15px; 
+    border-radius: 8px;">
+    <h2>Vecteur</h2>
+</div>
 vecteurs de base :
 - forment le repère
 - chacun suit un axe, sa taille correspond a l'unité de cet axe :
@@ -58,34 +89,41 @@ multiplication des coordonnée d'un vecteur par un nombre = multiplication de ch
 ---
 ---
 
-## Statistiques
-Voir le markdown du même nom
+
+<div style="
+    background-color: #c8a043ff; 
+    color: #fff; 
+    font-size: 16px; 
+    font-style: italic; 
+    padding: 10px 15px; 
+    margin-bottom: 15px; 
+    border-radius: 8px;">
+    <h2>Statistique</h2>
+    <p>Voir le markdown du même nom</p>
+</div>
 
 
-| Terme            | Définition courte                                                                                                                       |
-| ---------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
+|                  |                                 |
+| ---------------- | ------------------------------- |
 | **Centrer**      | Soustraire la **moyenne** → valeurs réparties autour de 0                                                                               |
 | **Réduire**      | Diviser par l’**écart-type** → met toutes les variables sur une échelle comparable                                                      |
 | **Standardiser** | **Centrer + Réduire** → moyenne = 0, écart-type = 1                                                                                     |
-| **Normaliser**   | **Ramener dans un intervalle fixe** (souvent $0,1$) → met toutes les valeurs à la même échelle sans changer la forme de la distribution |
+| **Normaliser**   | **Ramener dans un intervalle fixe** (souvent $0,1$) → met toutes les valeurs à la même échelle sans changer la forme de la distribution<br>`Min-Max scaling` |
 
-### Normaliser les données
+<br>
+<br>
 
-`Min-Max scaling`
-Pour que les valeurs soient comprises dans un intervalle<br> souvent $0$ et $1$
+<div style="
+    background-color: #439cc8; 
+    color: #fff; 
+    font-size: 16px; 
+    font-style: italic; 
+    padding: 10px 15px; 
+    margin-bottom: 15px; 
+    border-radius: 8px;">
+    <h3>Centrer</h3>
+</div>
 
-
-$$ X_\text{normalisé} = \frac {X - X_\text{min}} {X_\text{max} - X_\text{min}} $$
-
-​
-- Utile quand les variables ont des unités très différentes.
-
-- Recommandé pour les algorithmes sensibles aux amplitudes brutes (réseaux de neurones, distances euclidiennes...).
-
-- Ne change pas la forme de la distribution, juste l’échelle.
-
-
-### centrer les données
 
 Répartit les données autour de zéro.
 
@@ -97,8 +135,20 @@ $$ 𝑥_\text{centré} = x - \bar x $$
 Après centrage, la moyenne $\mu =0$.
 
 Cela ne change pas l'écart-type (la dispersion), donc ne modifie pas le nuage de points, seulement la position de la variable sur l’axe des valeurs.
+<br>
+<br>
+<br>
 
-### Réduire les données
+<div style="
+    background-color: #439cc8; 
+    color: #fff; 
+    font-size: 16px; 
+    font-style: italic; 
+    padding: 10px 15px; 
+    margin-bottom: 15px; 
+    border-radius: 8px;">
+    <h3>Réduire</h3>
+</div>
 Réduire l’écart-type à 1
 Diviser chaque variable centrée par son écart-type $\sigma$
 Se fait souvent après le centrage :
@@ -112,9 +162,22 @@ $$ 𝑥_\text{réduit} = \frac{x - \bar x}{\sigma} $$
 - indispensable si les unité de mesure sont différentes d'une variable à l'autre
 
 - Ne pas réduire donne plus d'importance aux variables qui on une variance plus grande
+<br>
+<br>
+<br>
 
 
-### Centrer et réduire = Standardiser
+
+<div style="
+    background-color: #439cc8; 
+    color: #fff; 
+    font-size: 16px; 
+    font-style: italic; 
+    padding: 10px 15px; 
+    margin-bottom: 15px; 
+    border-radius: 8px;">
+    <h3>Standardiser = Centrer et réduire</h3>
+</div>
 
 | Aspect      | Standardisation               | Normalisation                              |
 | ----------- | ----------------------------- | ------------------------------------------ |
@@ -130,7 +193,35 @@ Utile quand :
 - Les algorithmes sont basés sur la distance ou les coefficients (régression linéaire, K-means, PCA
 
 
-### Dérivée
+### Normaliser les données - `Min-Max scaling`
+
+
+Pour que les valeurs soient comprises dans un intervalle<br> souvent $0$ et $1$
+
+
+$$ X_\text{normalisé} = \frac {X - X_\text{min}} {X_\text{max} - X_\text{min}} $$
+
+​
+- Utile quand les variables ont des unités très différentes.
+
+- Recommandé pour les descentes de gradient, les algorithmes sensibles aux amplitudes brutes (réseaux de neurones, distances euclidiennes...).
+
+- Ne change pas la forme de la distribution, juste l’échelle.
+
+<br>
+<br>
+<br>
+
+<div style="
+    background-color: #c8a043ff; 
+    color: #fff; 
+    font-size: 16px; 
+    font-style: italic; 
+    padding: 10px 15px; 
+    margin-bottom: 15px; 
+    border-radius: 8px;">
+    <h2>Dérivée</h2>
+</div>
 
 **Dérivation** : étude des variations en un point<br>
 Comme cela n'as pas de sens d'étudier les variation sur un point<br>
@@ -170,7 +261,18 @@ $𝑤$ augmente.
 
 - Si $\frac{∂𝐿}{∂w} < 0$ la pente est négative → la fonction coût diminue quand $𝑤$ augmente
 
-### Desente de gradient
+
+<div style="
+    background-color: #c8a043ff; 
+    color: #fff; 
+    font-size: 16px; 
+    font-style: italic; 
+    padding: 10px 15px; 
+    margin-bottom: 15px; 
+    border-radius: 8px;">
+    <h2>Descente de gradient</h2>
+</div>
+
 En machine learning, dans l’apprentissage (gradient descent), on ajuste $𝑤$ dans le sens opposé au gradient :
 $$ 𝑤 = 𝑤−𝛼\frac{∂𝐿}{∂w} $$
 
@@ -182,14 +284,33 @@ $\alpha$ est  un tout petit positif, cela diminue petit à petit le paramètre $
 | **y (ordonnée)** | la **log loss (L(w))** | erreur moyenne du modèle |
 
 
-## opérations
+<div style="
+    background-color: #c8a043ff; 
+    color: #fff; 
+    font-size: 16px; 
+    font-style: italic; 
+    padding: 10px 15px; 
+    margin-bottom: 15px; 
+    border-radius: 8px;">
+    <h2>Opérations</h2>
+</div>
 - addition
 - soustraction
 - multiplication
 - division
 - convolution
 
-## Identités remarquables :
+<div style="
+    background-color: #c8a043ff; 
+    color: #fff; 
+    font-size: 16px; 
+    font-style: italic; 
+    padding: 10px 15px; 
+    margin-bottom: 15px; 
+    border-radius: 8px;">
+    <h2>Identités remarquables</h2>
+</div>
+
 #### 1. Carré d'une somme
 $$
 (a + b)^2 = a^2 + 2ab + b^2
@@ -204,7 +325,18 @@ $$
 $$
 
 
-## Polynôme
+
+<div style="
+    background-color: #c8a043ff; 
+    color: #fff; 
+    font-size: 16px; 
+    font-style: italic; 
+    padding: 10px 15px; 
+    margin-bottom: 15px; 
+    border-radius: 8px;">
+    <h2>Polynôme</h2>
+</div>
+
 
 ### équation du 1er degré
 équation linéaire, où la variable est élevée à la puissance 1. Elle prend généralement la forme suivante :$$ax+b=0$$où a et b sont des constantes, avec $$a≠0$$Cette équation a une seule solution.

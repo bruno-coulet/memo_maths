@@ -249,6 +249,10 @@ la variation d'une droite dépend du signe de son coefficient directeur :
 - coefficient directeur > 0 : droite croissante
 - coefficient directeur < 0 : droite décroissante
 
+## Dérivée partielle
+
+Dérivéé partielle de $J$ par rapport au paramètre $a$ : $\frac{\partial J}{\partial a}$
+
 
 ### le gradient
 
@@ -417,8 +421,18 @@ où $x0$​ est la racine double.
 
 
 
-## Logarithmes
-sont la réciproque des exponenetielles
+<div style="
+    background-color: #c8a043ff; 
+    color: #fff; 
+    font-size: 16px; 
+    font-style: italic; 
+    padding: 10px 15px; 
+    margin-bottom: 15px; 
+    border-radius: 8px;">
+    <h2>Logarithmes</h2>
+    <p>sont la réciproque des exponentielles</p>
+</div>
+
 
 La forme générale de la courbe logarithmique est la même pour toutes les bases :
 
@@ -438,8 +452,18 @@ La forme générale de la courbe logarithmique est la même pour toutes les base
 Le logarithme $log_𝑏(𝑥)$ donne l’exposant $𝑦$ tel que $𝑏^𝑦 = 𝑥$
 $$log_𝑏(𝑥) = y \quad \Longleftrightarrow \quad b^y=x$$
 
+<div style="
+    background-color: #439cc8; 
+    color: #fff; 
+    font-size: 16px; 
+    font-style: italic; 
+    padding: 10px 15px; 
+    margin-bottom: 15px; 
+    border-radius: 8px;">
+    <h3>Log de base 10</h3>
+</div>
 
-🔹 Exemples : $log_{10}(10)$<br>
+Exemple : $log_{10}(10)$
 
 Base : $b = 10$<br>
 Nombre : $x = 10$<br>
@@ -450,8 +474,25 @@ $100 = 10^2$ →  $log (100) = 2$ <br>
 $1000 = 10^3$  →  $log (1000) = 3$<br>
 etc..
 
+| Expression           | Question                                              | Equivalent | Résultats               |
+| -------------------- | ----------------------------------------------------- | ---------- | ----------------------- |
+| $$\log_{10} 100 $$   | combien de 10 multiplier entre eux pour obtenir 100   | $$10^2 = 100$$   | $$\log_{10} 100 =2$$    |
+| $$\log_{10} 1000$$   | combien de 10 multiplier entre eux pour obtenir 1000  | $$10^3 = 1000$$   | $$\log_{10} 1000 = 3 $$ |
+| $$\log_{10} 10 000$$ | combien de 10 multiplier entre eux pour obtenir 10000 | $$10^4 = 10000$$   | $$\log_{10} 10000 = 4$$   |
 
-🔹 Exemples : $log_{2}(8)$<br>
+
+<div style="
+    background-color: #439cc8; 
+    color: #fff; 
+    font-size: 16px; 
+    font-style: italic; 
+    padding: 10px 15px; 
+    margin-bottom: 15px; 
+    border-radius: 8px;">
+    <h3>Log de base 2</h3>
+</div>
+
+Exemples : $log_{2}(8)$<br>
 
 Base : $b = 2$<br>
 Nombre : $x = 8$<br>
@@ -461,21 +502,11 @@ $(2*2*2=8)$
 
 <img src="img/log10.png" width=500>
 
-### Logarithme en base 10
-
-| Expression           | Question                                              | Equivalent | Résultats               |
-| -------------------- | ----------------------------------------------------- | ---------- | ----------------------- |
-| $$\log_{10} 100 $$   | combien de 10 multiplier entre eux pour obtenir 100   | $$10^2 = 100$$   | $$\log_{10} 100 =2$$    |
-| $$\log_{10} 1000$$   | combien de 10 multiplier entre eux pour obtenir 1000  | $$10^3 = 1000$$   | $$\log_{10} 1000 = 3 $$ |
-| $$\log_{10} 10 000$$ | combien de 10 multiplier entre eux pour obtenir 10000 | $$10^4 = 10000$$   | $$\log_{10} 10000 = 4$$   |
-
-
-### Logarithme en base 2
-
 | $$\log_{2} 8 $$ | combien de 2 multiplier entre eux pour obtenir 8  | $$10^2$$ | $$\log_{2} 8 = 3$$  |
 | --------------- | ------------------------------------------------- | -------- | ------------------- |
 | $$\log_{2} 16$$ | combien de 2 multiplier entre eux pour obtenir 16 | $$10^3$$ | $$\log_{2} 16 = 4$$ |
 | $$\log_{2} 32$$ | combien de 2 multiplier entre eux pour obtenir 32 | $$10^4$$ | $$\log_{2} 32 = 5$$ |
+
 
 
 **Les tables de logarithme** simplifient la multiplication de grand nombres en les transformant en addition<br>
@@ -483,7 +514,17 @@ $(2*2*2=8)$
 **log(988 452x659 233) = log(988 452) + log(659 233))**
 <br>
 
-### logarithme naturel ou népérien
+<div style="
+    background-color: #439cc8; 
+    color: #fff; 
+    font-size: 16px; 
+    font-style: italic; 
+    padding: 10px 15px; 
+    margin-bottom: 15px; 
+    border-radius: 8px;">
+    <h3>Logarithme naturel ou népérien</h3>
+</div>
+
  C’est le logarithme dont la base est $𝑒≈2.71828$<br>
 $e$ étant le nombre d’Euler
 
@@ -493,7 +534,18 @@ notation standard en mathématiques : $ln(𝑥)$<br>
 notation internationale et en machine learning : $log$
 
 utilisé par la fonction **logit**
-### racine / exposant
+
+<div style="
+    background-color: #c8a043ff; 
+    color: #fff; 
+    font-size: 16px; 
+    font-style: italic; 
+    padding: 10px 15px; 
+    margin-bottom: 15px; 
+    border-radius: 8px;">
+    <h3>racine / exposant</h3>
+</div>
+
 $2^2 = 4$
 
 | au carré       | exposant $^2$      |
@@ -511,8 +563,4 @@ $\sigma$ (sigma) = écart type
 phénomène aléatoire
 
 ---
-
-## Dérivée partielle
-
-Dérivéé partielle de $J$ par rapport au paramètre $a$ : $\frac{\partial J}{\partial a}$
  

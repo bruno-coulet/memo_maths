@@ -73,17 +73,21 @@ et les **fonction trigonométriques** : cosinus, sinus, tangente.
 </div>
 vecteurs de base :
 - forment le repère
-- chacun suit un axe, sa taille correspond a l'unité de cet axe :
-	- $\vec{i}$  pour les abscisse
-	- $\vec{j}$  pour les ordonnées
-- permettent d'obtenir les coordonnées d'un vecteur
+- chacun suit un axe, sa taille correspond a l'unité de cet axe :<br><br>
+
+$\vec{i}$  pour les abscisse<br>
+$\vec{j}$  pour les ordonnées
+
+permettent d'obtenir les coordonnées d'un vecteur
 
 ![u](img/vecteur_u.png)
 
 Les coordonnées  d'un vecteur se notent verticalement :
 
 ![u](img/u.png)
+
 Addition de vecteur = addition de leur coordonnée respectives
+
 multiplication des coordonnée d'un vecteur par un nombre = multiplication de chacune des coordonnées par ce nombre
 
 ---
@@ -132,9 +136,9 @@ Pour chaque variable : soustrait la moyenne de la variable à chaque observation
 $$ 𝑥_\text{centré} = x - \bar x $$
 <br>
 
-Après centrage, la moyenne $\mu =0$.
+Après centrage, la moyenne $$\mu =0$$.
 
-Cela ne change pas l'écart-type (la dispersion), donc ne modifie pas le nuage de points, seulement la position de la variable sur l’axe des valeurs.
+Cela ne change pas l'écart-type (la dispersion), donc ne modifie pas le nuage de points, seulement la position de la variable sur l’axe des valeurs
 <br>
 <br>
 <br>
@@ -150,7 +154,10 @@ Cela ne change pas l'écart-type (la dispersion), donc ne modifie pas le nuage d
     <h3>Réduire</h3>
 </div>
 Réduire l’écart-type à 1
-Diviser chaque variable centrée par son écart-type $\sigma$
+Diviser chaque variable centrée par son écart-type<br>
+
+$$\sigma$$
+
 Se fait souvent après le centrage :
 
 $$ 𝑥_\text{réduit} = \frac{x - \bar x}{\sigma} $$

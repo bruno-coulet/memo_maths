@@ -1,10 +1,10 @@
 <div style="
-    background-color: #c8a043ff; 
-    color: #fff; 
-    font-size: 16px; 
-    font-style: italic; 
-    padding: 10px 15px; 
-    margin-bottom: 15px; 
+    background-color: #c8a043ff;
+    color: #fff;
+    font-size: 16px;
+    font-style: italic;
+    padding: 10px 15px;
+    margin-bottom: 15px;
     border-radius: 8px;">
     <h2>Famille de nombres</h2>
 </div>
@@ -39,12 +39,12 @@ En résumé, les nombres naturels sont utilisés pour compter, tandis que les no
 <br>
 
 <div style="
-    background-color: #c8a043ff; 
-    color: #fff; 
-    font-size: 16px; 
-    font-style: italic; 
-    padding: 10px 15px; 
-    margin-bottom: 15px; 
+    background-color: #c8a043ff;
+    color: #fff;
+    font-size: 16px;
+    font-style: italic;
+    padding: 10px 15px;
+    margin-bottom: 15px;
     border-radius: 8px;">
     <h2>Cercle trigonométrie</h2>
 </div>
@@ -62,12 +62,12 @@ et les **fonction trigonométriques** : cosinus, sinus, tangente.
 
 
 <div style="
-    background-color: #c8a043ff; 
-    color: #fff; 
-    font-size: 16px; 
-    font-style: italic; 
-    padding: 10px 15px; 
-    margin-bottom: 15px; 
+    background-color: #c8a043ff;
+    color: #fff;
+    font-size: 16px;
+    font-style: italic;
+    padding: 10px 15px;
+    margin-bottom: 15px;
     border-radius: 8px;">
     <h2>Vecteur</h2>
 </div>
@@ -95,12 +95,12 @@ multiplication des coordonnée d'un vecteur par un nombre = multiplication de ch
 
 
 <div style="
-    background-color: #c8a043ff; 
-    color: #fff; 
-    font-size: 16px; 
-    font-style: italic; 
-    padding: 10px 15px; 
-    margin-bottom: 15px; 
+    background-color: #c8a043ff;
+    color: #fff;
+    font-size: 16px;
+    font-style: italic;
+    padding: 10px 15px;
+    margin-bottom: 15px;
     border-radius: 8px;">
     <h2>Statistique</h2>
     <p>Voir le markdown du même nom</p>
@@ -118,12 +118,12 @@ multiplication des coordonnée d'un vecteur par un nombre = multiplication de ch
 <br>
 
 <div style="
-    background-color: #439cc8; 
-    color: #fff; 
-    font-size: 16px; 
-    font-style: italic; 
-    padding: 10px 15px; 
-    margin-bottom: 15px; 
+    background-color: #439cc8;
+    color: #fff;
+    font-size: 16px;
+    font-style: italic;
+    padding: 10px 15px;
+    margin-bottom: 15px;
     border-radius: 8px;">
     <h3>Centrer</h3>
 </div>
@@ -144,12 +144,12 @@ Cela ne change pas l'écart-type (la dispersion), donc ne modifie pas le nuage d
 <br>
 
 <div style="
-    background-color: #439cc8; 
-    color: #fff; 
-    font-size: 16px; 
-    font-style: italic; 
-    padding: 10px 15px; 
-    margin-bottom: 15px; 
+    background-color: #439cc8;
+    color: #fff;
+    font-size: 16px;
+    font-style: italic;
+    padding: 10px 15px;
+    margin-bottom: 15px;
     border-radius: 8px;">
     <h3>Réduire</h3>
 </div>
@@ -176,12 +176,12 @@ $$ 𝑥_\text{réduit} = \frac{x - \bar x}{\sigma} $$
 
 
 <div style="
-    background-color: #439cc8; 
-    color: #fff; 
-    font-size: 16px; 
-    font-style: italic; 
-    padding: 10px 15px; 
-    margin-bottom: 15px; 
+    background-color: #439cc8;
+    color: #fff;
+    font-size: 16px;
+    font-style: italic;
+    padding: 10px 15px;
+    margin-bottom: 15px;
     border-radius: 8px;">
     <h3>Standardiser = Centrer et réduire</h3>
 </div>
@@ -220,12 +220,12 @@ $$ X_\text{normalisé} = \frac {X - X_\text{min}} {X_\text{max} - X_\text{min}} 
 <br>
 
 <div style="
-    background-color: #c8a043ff; 
-    color: #fff; 
-    font-size: 16px; 
-    font-style: italic; 
-    padding: 10px 15px; 
-    margin-bottom: 15px; 
+    background-color: #c8a043ff;
+    color: #fff;
+    font-size: 16px;
+    font-style: italic;
+    padding: 10px 15px;
+    margin-bottom: 15px;
     border-radius: 8px;">
     <h2>Dérivée</h2>
 </div>
@@ -265,21 +265,21 @@ Dérivéé partielle de $J$ par rapport au paramètre $a$ : $\frac{\partial J}{\
 
 Le gradient $\frac{∂𝐿}{∂w}$​ mesure la pente de la fonction coût par rapport à $𝑤$
 
-👉 C’est la variation de la fonction coût (par exemple log loss (en ordonnée) quand le paramètre $w$ (en abscisse) varie légèrement
+C’est la variation de la fonction coût (par exemple log loss (en ordonnée) quand le paramètre $w$ (en abscisse) varie légèrement
 
-- Si $\frac{∂𝐿}{∂w} > 0$ la pente est positive → la fonction coût augmente quand 
+- Si $\frac{∂𝐿}{∂w} > 0$ la pente est positive → la fonction coût augmente quand
 $𝑤$ augmente.
 
 - Si $\frac{∂𝐿}{∂w} < 0$ la pente est négative → la fonction coût diminue quand $𝑤$ augmente
 
 
 <div style="
-    background-color: #c8a043ff; 
-    color: #fff; 
-    font-size: 16px; 
-    font-style: italic; 
-    padding: 10px 15px; 
-    margin-bottom: 15px; 
+    background-color: #c8a043ff;
+    color: #fff;
+    font-size: 16px;
+    font-style: italic;
+    padding: 10px 15px;
+    margin-bottom: 15px;
     border-radius: 8px;">
     <h2>Descente de gradient</h2>
 </div>
@@ -296,12 +296,12 @@ $\alpha$ est  un tout petit positif, cela diminue petit à petit le paramètre $
 
 
 <div style="
-    background-color: #c8a043ff; 
-    color: #fff; 
-    font-size: 16px; 
-    font-style: italic; 
-    padding: 10px 15px; 
-    margin-bottom: 15px; 
+    background-color: #c8a043ff;
+    color: #fff;
+    font-size: 16px;
+    font-style: italic;
+    padding: 10px 15px;
+    margin-bottom: 15px;
     border-radius: 8px;">
     <h2>Opérations</h2>
 </div>
@@ -312,12 +312,12 @@ $\alpha$ est  un tout petit positif, cela diminue petit à petit le paramètre $
 - convolution
 
 <div style="
-    background-color: #c8a043ff; 
-    color: #fff; 
-    font-size: 16px; 
-    font-style: italic; 
-    padding: 10px 15px; 
-    margin-bottom: 15px; 
+    background-color: #c8a043ff;
+    color: #fff;
+    font-size: 16px;
+    font-style: italic;
+    padding: 10px 15px;
+    margin-bottom: 15px;
     border-radius: 8px;">
     <h2>Identités remarquables</h2>
 </div>
@@ -338,12 +338,12 @@ $$
 
 
 <div style="
-    background-color: #c8a043ff; 
-    color: #fff; 
-    font-size: 16px; 
-    font-style: italic; 
-    padding: 10px 15px; 
-    margin-bottom: 15px; 
+    background-color: #c8a043ff;
+    color: #fff;
+    font-size: 16px;
+    font-style: italic;
+    padding: 10px 15px;
+    margin-bottom: 15px;
     border-radius: 8px;">
     <h2>Polynôme</h2>
 </div>
@@ -404,7 +404,7 @@ s'écrit : $f(x)=a(x−α)2+β$ où :
 
 On peut obtenir $α$ et $β$ à partir de la forme développée $f(x)=ax2+bx+c$ :
 $α=−b/2a$
-  
+
 $β=−Δ/4a = −(b2−4ac)/4a$
 
 ### La forme développée
@@ -429,12 +429,12 @@ où $x0$​ est la racine double.
 
 
 <div style="
-    background-color: #c8a043ff; 
-    color: #fff; 
-    font-size: 16px; 
-    font-style: italic; 
-    padding: 10px 15px; 
-    margin-bottom: 15px; 
+    background-color: #c8a043ff;
+    color: #fff;
+    font-size: 16px;
+    font-style: italic;
+    padding: 10px 15px;
+    margin-bottom: 15px;
     border-radius: 8px;">
     <h2>Logarithmes</h2>
     <p>sont la réciproque des exponentielles</p>
@@ -460,12 +460,12 @@ Le logarithme $log_𝑏(𝑥)$ donne l’exposant $𝑦$ tel que $𝑏^𝑦 = �
 $$log_𝑏(𝑥) = y \quad \Longleftrightarrow \quad b^y=x$$
 
 <div style="
-    background-color: #439cc8; 
-    color: #fff; 
-    font-size: 16px; 
-    font-style: italic; 
-    padding: 10px 15px; 
-    margin-bottom: 15px; 
+    background-color: #439cc8;
+    color: #fff;
+    font-size: 16px;
+    font-style: italic;
+    padding: 10px 15px;
+    margin-bottom: 15px;
     border-radius: 8px;">
     <h3>Log de base 10</h3>
 </div>
@@ -489,12 +489,12 @@ etc..
 
 
 <div style="
-    background-color: #439cc8; 
-    color: #fff; 
-    font-size: 16px; 
-    font-style: italic; 
-    padding: 10px 15px; 
-    margin-bottom: 15px; 
+    background-color: #439cc8;
+    color: #fff;
+    font-size: 16px;
+    font-style: italic;
+    padding: 10px 15px;
+    margin-bottom: 15px;
     border-radius: 8px;">
     <h3>Log de base 2</h3>
 </div>
@@ -522,12 +522,12 @@ $(2*2*2=8)$
 <br>
 
 <div style="
-    background-color: #439cc8; 
-    color: #fff; 
-    font-size: 16px; 
-    font-style: italic; 
-    padding: 10px 15px; 
-    margin-bottom: 15px; 
+    background-color: #439cc8;
+    color: #fff;
+    font-size: 16px;
+    font-style: italic;
+    padding: 10px 15px;
+    margin-bottom: 15px;
     border-radius: 8px;">
     <h3>Logarithme naturel ou népérien</h3>
 </div>
@@ -543,12 +543,12 @@ notation internationale et en machine learning : $log$
 utilisé par la fonction **logit**
 
 <div style="
-    background-color: #c8a043ff; 
-    color: #fff; 
-    font-size: 16px; 
-    font-style: italic; 
-    padding: 10px 15px; 
-    margin-bottom: 15px; 
+    background-color: #c8a043ff;
+    color: #fff;
+    font-size: 16px;
+    font-style: italic;
+    padding: 10px 15px;
+    margin-bottom: 15px;
     border-radius: 8px;">
     <h3>racine / exposant</h3>
 </div>
@@ -570,4 +570,4 @@ $\sigma$ (sigma) = écart type
 phénomène aléatoire
 
 ---
- 
+
